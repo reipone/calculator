@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #C1E1C1, #afcf95);
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(6, 100px);
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid #808000;
+    outline: none;
+    background-color: rgb(138, 154, 91, 0.6);
+
+}
+
+.calculator-grid > button:hover {
+    background-color: rgb(138, 154, 91, 0.9);
+}
+
+
+.span-four {
+    grid-column: span 4;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgb(76, 76, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 15px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: rgb(255, 255, 255, 0.8);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: rgb(255, 255, 255, 1);
+    font-size: 2.5rem;
+}
